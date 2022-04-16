@@ -23,6 +23,11 @@ html {
   -ms-text-size-adjust: 100%;
 }
 
+body {
+  @extend .roboto-16-normal;
+  background-color: $main;
+}
+
 a {
   text-decoration: none;
 }

@@ -8,11 +8,16 @@
     <link rel="stylesheet" href="./dist/style.css" />
   </head>
   <body>
+    <header class="header">
+      <div class="header__wrapper wrapper">
+        <div class="header__logo">Notes App</div>
+      </div>
+    </header>
     <section class="notes">
-      <div class="notes__wrapper">
+      <div class="notes__wrapper wrapper">
         <form class="notes__form">
           <div class="notes__form-wrapper">
-            <label for="title">Title</label>
+            <label class="notes__form-label" for="title">Title</label>
             <input
               type="text"
               class="notes__form-text | js-title"
@@ -22,20 +27,27 @@
             />
           </div>
           <div class="notes__form-wrapper">
-            <label for="description">Description</label>
+            <label class="notes__form-label" for="description"
+              >Description</label
+            >
             <input
               type="text"
-              class="notes__form-text | js-description"
+              class="notes__form-text notes__form-text-description | js-description"
               placeholder="Enter Your Description"
               autocomplete="off"
               name="title"
             />
           </div>
-          <button class="form__btn | js-submit">Submit</button>
+          <button class="btn form__btn | js-submit">Add Note</button>
         </form>
-        <ul class="notes__items | js-notes"></ul>
+        <ul class="notes__items | js-notes">
+          <h3 class="notes__item-title"></h3>
+          <p class="notes__item-description"></p>
+          <button class="btn notes__item-btn | js-delete">Delete</button>
+        </ul>
       </div>
     </section>
+
     <script src="./dist/main.js"></script>
   </body>
 </html>

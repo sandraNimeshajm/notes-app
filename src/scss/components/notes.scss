@@ -1,0 +1,88 @@
+.notes {
+  margin: 48px 0;
+}
+
+.notes__form {
+  max-width: 500px;
+  width: 100%;
+  margin-bottom: 96px;
+}
+
+.notes__form-wrapper {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.notes__form-label {
+  @extend .roboto-24-normal;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.notes__form-text {
+  @extend .roboto-16-normal;
+  display: block;
+  max-width: 500px;
+  width: 100%;
+  padding: 16px;
+  background-color: $white;
+  border: 1px solid $main;
+  border-radius: 10px;
+}
+
+.notes__form-text-description {
+  padding: 16px 16px 96px;
+}
+
+.form__btn {
+  @extend .roboto-16-normal;
+  background-color: $purple;
+  border: 2px solid $purple;
+  color: $black;
+  border-radius: 10px;
+  padding: 16px 50px;
+
+  @include hover {
+    background-color: $white;
+    border: 2px solid $purple;
+    color: $purple;
+  }
+}
+
+.notes__items {
+  @extend .roboto-20-normal;
+  max-width: 330px;
+  width: 100%;
+}
+
+.js-note {
+  &:not(:last-child) {
+    margin-right: 16px;
+  }
+}
+
+.notes__item-title,
+.notes__item-description {
+  margin-bottom: 16px;
+  background-color: $white;
+  border: 2px solid $white;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.notes__item-description {
+  padding: 16px 16px 64px;
+}
+
+.notes__item-btn {
+  background-color: $white;
+  border: 2px solid $purple;
+  color: $black;
+
+  @include hover {
+    background-color: $purple;
+    border: 2px solid $purple;
+    color: $white;
+  }
+}

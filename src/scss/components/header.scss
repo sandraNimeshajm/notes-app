@@ -1,0 +1,9 @@
+.header {
+  padding: 24px 0;
+  width: 100%;
+  background-color: $white;
+}
+
+.header__logo {
+  @extend .roboto-48-bold;
+}

@@ -1,36 +1,23 @@
-.container {
-  max-width: 1430px;
-  margin: 0 auto;
+.wrapper {
+  max-width: 1640px;
+  width: 100%;
+  padding: 0 100px;
+
   @include mq(1530) {
     max-width: 100%;
-    padding: 0 50px;
+    padding: 0 64px;
   }
-  @include mq(767) {
-    padding: 0 20px;
+  @include mq(768) {
+    padding: 0 48px;
   }
 }
 
-.line-link {
-  position: relative;
-  &::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    background: $black;
-    border-radius: 3px;
-    height: 4px;
-    bottom: -10px;
-    left: 0;
-    will-change: transform;
-    transform-origin: 100% 50%;
-    transform: scale3d(0, 1, 1);
-    transition: transform 0.3s cubic-bezier(0.2, 1, 0.8, 1);
-  }
-  @include hover {
-    &::after {
-      transform-origin: 0% 50%;
-      transform: scale3d(1, 1, 1);
-      transition-timing-function: cubic-bezier(0.7, 0, 0.2, 1);
-    }
-  }
+.btn {
+  @extend .roboto-16-normal;
+  background-color: transparent;
+  border: 2px solid transparent;
+  color: $black;
+  border-radius: 10px;
+  padding: 16px 50px;
+  transition: background-color 0.3s, border 0.3s, color 0.3s;
 }

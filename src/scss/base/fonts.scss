@@ -6,3 +6,45 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../../src/fonts/Roboto-Medium.woff2") format("woff2"),
+    url("../../src/fonts/Roboto-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../../src/fonts/Roboto-Bold.woff2") format("woff2"),
+    url("../../src/fonts/Roboto-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.roboto-16-normal {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.roboto-20-normal {
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.roboto-24-normal {
+  font-family: "Roboto";
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.roboto-48-bold {
+  font-family: "Roboto";
+  font-size: 48px;
+  font-weight: 700;
+}
