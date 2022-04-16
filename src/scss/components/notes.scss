@@ -29,10 +29,12 @@
   background-color: $white;
   border: 1px solid $main;
   border-radius: 10px;
+  color: $black;
 }
 
 .notes__form-text-description {
   padding: 16px 16px 96px;
+  color: $grey;
 }
 
 .form__btn {
@@ -52,14 +54,16 @@
 
 .notes__items {
   @extend .roboto-20-normal;
-  max-width: 330px;
+  max-width: 1430px;
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 64px;
 }
 
 .js-note {
-  &:not(:last-child) {
-    margin-right: 16px;
-  }
+  max-width: 330px;
+  width: 100%;
 }
 
 .notes__item-title,
@@ -69,10 +73,12 @@
   border: 2px solid $white;
   border-radius: 10px;
   padding: 16px;
+  color: $black;
 }
 
 .notes__item-description {
   padding: 16px 16px 64px;
+  color: $grey;
 }
 
 .notes__item-btn {
