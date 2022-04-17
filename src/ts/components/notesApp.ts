@@ -30,10 +30,11 @@ const notesApp = () => {
     }
 
     if (titleValue) {
-      newNote.innerHTML = `<h3 class="notes__item-title | js-text ">${titleValue}</h3>
-                            <p class="notes__item-description | js-text">${descValue}</p>
-                            <button  class="btn notes__item-btn | js-delete">Delete</button>
-                            <button  class="btn notes__item-btn | js-edit">Edit</button>
+      newNote.innerHTML = `
+                              <h3 class="notes__item-title | js-text">${titleValue}</h3>
+                              <p class="notes__item-description | js-text">${descValue}</p>
+                              <button  class="btn notes__item-btn | js-delete">Delete</button>
+                              <button  class="btn notes__item-btn | js-edit">Edit</button>
 
     `;
 
