@@ -30,11 +30,17 @@ const notesApp = () => {
     }
 
     if (titleValue) {
-      newNote.innerHTML = `<h3 class="notes__item-title">${titleValue}</h3>
-                          <p class="notes__item-description">${descValue}</p>
-                          <button  class="btn notes__item-btn | js-delete">Delete</button>
-  `;
+      newNote.innerHTML = `<h3 class="notes__item-title | js-text ">${titleValue}</h3>
+                            <p class="notes__item-description | js-text">${descValue}</p>
+                            <button  class="btn notes__item-btn | js-delete">Delete</button>
+                            <button  class="btn notes__item-btn | js-edit">Edit</button>
+
+    `;
+
       notesContainer.appendChild(newNote);
+      notesTitle.value = "";
+      notesDescription.value = "";
+
       updateNotes();
     }
 
@@ -42,6 +48,16 @@ const notesApp = () => {
     deleteBtn.addEventListener("click", deleteNotes);
     function deleteNotes() {
       newNote.remove();
+      updateNotes();
+    }
+
+    const texts = newNote.querySelectorAll(".js-text");
+    const editBtn = newNote.querySelector(".js-edit");
+    editBtn.addEventListener("click", editNotes);
+    function editNotes() {
+      texts.forEach((text) => {
+        text.contentEditable = true;
+      });
       updateNotes();
     }
   }

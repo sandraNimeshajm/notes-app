@@ -1,5 +1,10 @@
 .notes {
-  margin: 48px 0;
+  position: relative;
+  z-index: 20;
+}
+
+.notes__wrapper {
+  padding-top: 200px;
 }
 
 .notes__form {
@@ -41,7 +46,6 @@
   @extend .roboto-16-normal;
   background-color: $purple;
   border: 2px solid $purple;
-  color: $black;
   border-radius: 10px;
   padding: 16px 50px;
 
@@ -53,7 +57,7 @@
 }
 
 .notes__items {
-  @extend .roboto-20-normal;
+  @extend .roboto-16-normal;
   max-width: 1430px;
   width: 100%;
   display: flex;
@@ -84,11 +88,15 @@
 .notes__item-btn {
   background-color: $white;
   border: 2px solid $purple;
-  color: $black;
+  color: $purple;
 
   @include hover {
     background-color: $purple;
     border: 2px solid $purple;
     color: $white;
+  }
+
+  &:not(:last-child) {
+    margin-right: 16px;
   }
 }

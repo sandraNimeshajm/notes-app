@@ -24,7 +24,20 @@ html {
   -ms-text-size-adjust: 100%; }
 
 body {
-  background-color: #a4b0d8; }
+  color: #fff;
+  background: linear-gradient(180deg, #3734a9 0%, rgba(55, 52, 169, 0) 100%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; }
+  body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(8166c5eeffca3ef496d5.png); }
 
 a {
   text-decoration: none; }
@@ -124,12 +137,12 @@ td {
   font-style: normal;
   font-display: swap; }
 
-.roboto-16-normal, body, .btn, .notes__form-text, .form__btn {
+.roboto-16-normal, body, .btn, .notes__form-text, .form__btn, .notes__items {
   font-family: "Roboto";
   font-size: 16px;
   font-weight: normal; }
 
-.roboto-20-normal, .notes__items {
+.roboto-20-normal {
   font-family: "Roboto";
   font-size: 20px;
   font-weight: normal; }
@@ -159,19 +172,32 @@ td {
 .btn {
   background-color: transparent;
   border: 2px solid transparent;
-  color: #000;
+  color: #fff;
   border-radius: 10px;
   padding: 16px 50px;
   transition: background-color 0.3s, border 0.3s, color 0.3s; }
 
 /* Components */
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
   padding: 24px 0;
   width: 100%;
-  background-color: #fff; }
+  z-index: 10;
+  transition: background-color 0.3s, transform 0.3s, opacity 0.3s; }
+  .header.not-top {
+    background-color: #fff;
+    opacity: 0.7; }
+  .header.hide {
+    transform: translateY(-100%); }
 
 .notes {
-  margin: 48px 0; }
+  position: relative;
+  z-index: 20; }
+
+.notes__wrapper {
+  padding-top: 200px; }
 
 .notes__form {
   max-width: 500px;
@@ -200,16 +226,15 @@ td {
   color: #6e7282; }
 
 .form__btn {
-  background-color: #5d79da;
-  border: 2px solid #5d79da;
-  color: #000;
+  background-color: #3734a9;
+  border: 2px solid #3734a9;
   border-radius: 10px;
   padding: 16px 50px; }
   @media only screen and (min-width: 768px) {
     .form__btn:hover {
       background-color: #fff;
-      border: 2px solid #5d79da;
-      color: #5d79da; } }
+      border: 2px solid #3734a9;
+      color: #3734a9; } }
 
 .notes__items {
   max-width: 1430px;
@@ -237,11 +262,13 @@ td {
 
 .notes__item-btn {
   background-color: #fff;
-  border: 2px solid #5d79da;
-  color: #000; }
+  border: 2px solid #3734a9;
+  color: #3734a9; }
   @media only screen and (min-width: 768px) {
     .notes__item-btn:hover {
-      background-color: #5d79da;
-      border: 2px solid #5d79da;
+      background-color: #3734a9;
+      border: 2px solid #3734a9;
       color: #fff; } }
+  .notes__item-btn:not(:last-child) {
+    margin-right: 16px; }
 
